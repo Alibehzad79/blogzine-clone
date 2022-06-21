@@ -1,0 +1,471 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* Begin root classes */
+
+.flex {
+    display: flex;
+}
+
+.container {
+    display: flex;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    justify-items: center;
+}
+
+.clear {
+    width: 75%;
+    opacity: 0.1;
+}
+
+.clear>hr {
+    color: #2C82C9;
+}
+
+
+.list {
+    display: flex;
+    list-style-type: none;
+    gap: 1rem;
+}
+
+.list-link {
+    text-decoration: none;
+    text-align: center;
+    color: #5A5A5A;
+    font-size: 0.8rem;
+    text-align: center;
+    align-items: center;
+    display: flex;
+}
+
+.list-link:hover {
+    color: #1136C7;
+}
+
+.ml {
+    margin-left: 0.5rem;
+}
+
+.mr {
+    margin-right: 0.5rem;
+}
+
+.text-success {
+    color: #2ecc71;
+}
+
+.text-danger {
+    color: #E01931;
+}
+
+.text-warning {
+    color: #e67e22;
+}
+
+.text-dark {
+    color: #181303;
+}
+
+.text-primary {
+    color: #1136C7;
+}
+
+.btn {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.title {
+    font-size: 18px;
+    color: #181303;
+    text-decoration: none;
+}
+
+.btn-danger {
+    background-color: #f0dddf;
+    color: #E01931;
+    transition: background-color ease 0.3s;
+}
+
+.btn-danger:hover {
+    background-color: #E01931;
+    color: #fff;
+}
+.btn-success {
+    background-color: #e0eed7;
+    color: #27ae60;
+    transition: background-color ease 0.3s;
+}
+
+.btn-success:hover {
+    background-color: #27ae60;
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: #dde0f0;
+    color: #1136C7;
+    transition: background-color ease 0.3s;
+}
+.btn-primary:hover {
+    background-color: #1136C7;
+    color: #fff;
+}
+.btn-warning {
+    background-color: #f5f2ea;
+    color: #e67e22;
+    transition: background-color ease 0.3s;
+}
+
+.btn-warning:hover {
+    background-color: #e67e22;
+    color: #181303;
+}
+
+/* End root classes */
+
+/* Begin alert */
+
+.alert {
+    display: none;
+    justify-content: space-between;
+    padding: 0 1rem;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+}
+
+.alert-primary {
+    background: linear-gradient(to right, #2C82C9 80%, #E01931);
+}
+
+.alert-content {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #fff;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+
+.btn-close {
+    background-color: inherit;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.btn-dark {
+    background-color: #181303;
+    margin: 0 0.5rem;
+    padding: 0.3rem;
+    border-radius: 0.2rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+.alert.active {
+    display: flex;
+}
+
+/* End alert */
+
+/* Begin base navbar */
+
+.base-navbar {
+    font-size: 0.3rem;
+    width: 80%;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    margin: 1rem 0px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.font-size-btns {
+    border: 1px solid #1136C7;
+    gap: 0;
+    border-radius: 0.3rem;
+}
+
+.btn-font-size {
+    background-color: inherit;
+    padding: 0 1rem;
+    margin: 0;
+    color: #1136C7;
+    transition: background-color ease 0.5s;
+
+}
+
+.btn-font-size:hover {
+    background-color: #1136C7;
+    color: #fff;
+}
+
+.btn-font-size.active {
+    background-color: #1136C7;
+    color: #fff;
+}
+
+.btn-theme {
+    background-color: inherit;
+    text-align: center;
+    padding: 0 1rem;
+    color: #181303;
+    display: none;
+    transition: background-color 0.5s ease;
+}
+
+.btn-theme.active {
+    display: inline;
+}
+
+.btn-theme:hover {
+    color: #1136C7;
+}
+
+.social-list>li>a {
+    font-size: 1.5rem;
+}
+
+/* End base navbar */
+
+/* Begin navbar */
+.navbar {
+    justify-content: space-between;
+    align-content: space-between;
+    justify-items: center;
+    align-items: baseline;
+    width: 75%;
+}
+
+.img {
+    width: 100%;
+    height: auto;
+}
+
+.logo {
+    width: 138px;
+    height: 30px;
+}
+
+.dropdown>.list-link {
+    font-size: 1rem;
+    height: 4rem;
+}
+
+.dropdown-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    gap: 1rem;
+    padding: 1.5rem 1.5rem;
+    width: 100%;
+    border-radius: 0.2rem;
+    box-shadow: 0.2rem 0.2rem 1rem gray;
+    display: none;
+    position: absolute;
+    z-index: 2;
+    animation: drop 0.3s ease;
+    width: 10%;
+    min-width: 200px;
+    max-width: 10%;
+    opacity: 0;
+}
+
+.drop-link {
+    color: #181303;
+    font-size: 1rem;
+    width: 100%;
+    display: inline;
+    word-wrap: break-word;
+}
+
+.drop-link.active,
+.list-link.active {
+    color: #1136C7;
+    font-weight: 900;
+}
+
+.list-item.active {
+    list-style-type: disc;
+    color: #1136C7;
+}
+
+.dropdown:hover .dropdown-item {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes drop {
+    0% {
+        opacity: 0;
+        transition: all ease 1s;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.badge {
+    border: none;
+    outline: none;
+    margin: 0 0.2rem;
+    background-color: #5A5A5A;
+    border-radius: 0.3rem;
+    padding: 0 0.4rem;
+    color: #fff;
+}
+
+.badge-danger {
+    background-color: #E01931;
+}
+
+.lifestyle:hover .dropdown-item {
+    display: flex;
+}
+
+.lifestyle-sections {
+    display: none;
+    flex-direction: column;
+    width: 75%;
+    height: auto;
+    animation: lifestyle ease 1s;
+    box-shadow: 0.1rem 0.1rem 15px gray;
+    border-radius: 0.5rem;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: flex-start;
+    gap: 5rem;
+    padding: 1rem;
+    z-index: 1;
+    position: absolute;
+    width: 60%;
+    
+}
+
+@keyframes lifestyle {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.lifestyle:hover .lifestyle-sections {
+    display: flex;
+}
+
+.lifestyle-sections.active {
+    display: flex !important;
+}   
+
+.last-posts {
+    display: flex;
+    gap: 1rem;
+}
+
+.post {
+    width: 25%;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+}
+
+.img-lifestyle {
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 60%;
+}
+
+.membership {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    background-color: #e8effd;
+    padding: 0 1rem;
+    text-align: center;
+    border-radius: 0.5rem;
+}
+lifestyle-sections
+.date {
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #5A5A5A;
+}
+
+.btn-plane {
+    background-color: #f1c40f;
+    padding: 1rem;
+    border-radius: 0.2rem;
+    color: #181303;
+    margin-top: 1rem;
+}
+
+.trand-tags {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.trand-tags > span {
+    color: #5A5A5A;
+}
+
+.btn-tag {
+    padding: 0.6rem 1rem;
+    border-radius: 0.2rem;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+
+
+
+
+
+/* Media Query */
+
+@media screen and (max-width: 900px) {
+
+    .base-navbar,
+    .clear,
+    .navbar {
+        display: none;
+    }
+}
