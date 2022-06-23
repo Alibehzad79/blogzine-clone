@@ -377,10 +377,6 @@ body.active {
     background-color: #E01931;
 }
 
-.lifestyle:hover .dropdown-item {
-    display: flex;
-}
-
 .lifestyle-sections {
     display: none;
     flex-direction: column;
@@ -399,6 +395,7 @@ body.active {
     position: absolute;
     width: 60%;
     padding: 2%;
+    background-color: #fff;
 
 }
 
