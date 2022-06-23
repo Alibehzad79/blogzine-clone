@@ -1,5 +1,6 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
 }
 
 body {
@@ -14,6 +15,7 @@ body {
 
 .flex {
     display: flex;
+    gap: 10px;
 }
 
 .container {
@@ -93,12 +95,16 @@ body {
 
 .link {
     text-decoration: none;
+    position: relative;
 }
 
 .title {
-    font-size: 18px;
+    font-size: 16px;
     color: #181303;
-    text-decoration: none;
+}
+
+.title:hover {
+    color: #1136C7;
 }
 
 .btn-danger {
@@ -111,6 +117,7 @@ body {
     background-color: #E01931;
     color: #fff;
 }
+
 .btn-success {
     background-color: #e0eed7;
     color: #27ae60;
@@ -127,10 +134,12 @@ body {
     color: #1136C7;
     transition: background-color ease 0.3s;
 }
+
 .btn-primary:hover {
     background-color: #1136C7;
     color: #fff;
 }
+
 .btn-warning {
     background-color: #f5f2ea;
     color: #e67e22;
@@ -141,6 +150,18 @@ body {
     background-color: #e67e22;
     color: #181303;
 }
+
+input {
+    outline: none;
+}
+
+
+/* Begin dark theme */
+body.active {
+    background-color: #181303;
+}
+
+/* End dark theme */
 
 /* End root classes */
 
@@ -360,7 +381,7 @@ body {
 .lifestyle-sections {
     display: none;
     flex-direction: column;
-    width: 75%;
+    width: 100%;
     height: auto;
     animation: lifestyle ease 1s;
     box-shadow: 0.1rem 0.1rem 15px gray;
@@ -374,12 +395,18 @@ body {
     z-index: 1;
     position: absolute;
     width: 60%;
-    
+    padding: 2%;
+
 }
 
 @keyframes lifestyle {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .lifestyle:hover .lifestyle-sections {
@@ -388,7 +415,7 @@ body {
 
 .lifestyle-sections.active {
     display: flex !important;
-}   
+}
 
 .last-posts {
     display: flex;
@@ -407,7 +434,7 @@ body {
 .img-lifestyle {
     border-radius: 0.5rem;
     width: 100%;
-    height: 60%;
+    height: auto;
 }
 
 .membership {
@@ -421,9 +448,11 @@ body {
     padding: 0 1rem;
     text-align: center;
     border-radius: 0.5rem;
+    width: 25%;
 }
-lifestyle-sections
-.date {
+
+.date,
+.auther {
     text-transform: uppercase;
     font-size: 15px;
     color: #5A5A5A;
@@ -435,15 +464,21 @@ lifestyle-sections
     border-radius: 0.2rem;
     color: #181303;
     margin-top: 1rem;
+    transition: opacity 0.3s ease;
+}
+
+.btn-plane:hover {
+    opacity: 0.9;
 }
 
 .trand-tags {
     display: flex;
     gap: 0.5rem;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-.trand-tags > span {
+.trand-tags>span {
     color: #5A5A5A;
 }
 
@@ -454,10 +489,124 @@ lifestyle-sections
     text-transform: capitalize;
 }
 
+.btn-subscribe {
+    background-color: #E01931;
+    padding: 0.4rem;
+    color: #fff;
+    border-radius: 0.2rem;
+    font-size: 14px;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.btn-subscribe:hover {
+    background-color: #b61a2c;
+}
+
+.btn-search,
+.btn-navbar {
+    background-color: #fff;
+    font-size: 18px;
+}
+
+.btn-search:hover,
+.btn-navbar:hover {
+    color: #1136C7;
+}
+
+.search {
+    position: absolute;
+    top: 220px;
+    z-index: 4;
+    right: 250px;
+    background-color: #fff;
+    box-shadow: 0.1rem 0.1rem 0.5rem gray;
+    padding: 0.5rem;
+    display: none;
+    border-radius: 0.3rem;
+}
 
 
+.search.active {
+    display: flex;
+    animation: show 0.5s ease;
+}
 
+.search.fade {
+    animation: fade 0.5s ease;
+    display: none;
+}
 
+@keyframes show {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.search-input {
+    outline: none;
+    padding: 0.8rem;
+    border: 1px solid #27ae60;
+    border-radius: 0.3rem;
+    border-end-end-radius: 0;
+    border-start-end-radius: 0;
+}
+
+.search-btn {
+    padding: 0.8rem;
+    background-color: #27ae60;
+    color: #fff;
+    border-end-end-radius: 0.3rem;
+    border-Start-end-radius: 0.3rem;
+    font-weight: 700;
+
+}
+
+.offcanvas {
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    width: 25%;
+    height: 100%;
+    z-index: 10;
+    background-color: #fff;
+    top: 0;
+    padding: 2%;
+    align-items: flex-end;
+    box-shadow: 0.1rem 0.1rem 1rem gray;
+
+}
+
+.offcanvas.active {
+    display: flex;
+    animation: offcanvas 0.5s ease;
+}
+
+@keyframes offcanvas {
+    0% {transform: translateX(-100px); opacity: 0;}
+    100% {transform: translateX(0); opacity: 1;}
+}
+
+.offcanvas > .header > .title {
+    width: 100%;
+    height: 25%;
+    justify-self: flex-start;
+    align-self: flex-start;
+}
+.close {
+    font-size: 2rem;
+    color: #181303;
+    transition: color 0.3s ease;
+}
+.close:hover {
+    color: #E01931;
+}
 
 /* Media Query */
 
