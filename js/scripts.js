@@ -78,10 +78,42 @@ function toggleOffcanvas() {
     })
 
     offcanvasClose.addEventListener('click', () => {
-        if (offcanvas.classList.contains('active')){
+        if (offcanvas.classList.contains('active')) {
             offcanvas.classList.remove('active')
         }
     })
 }
 
 toggleOffcanvas();
+
+function toggleTrending() {
+    const next = document.querySelector('#next');
+    const perv = document.querySelector('#perv');
+    let trendingContent = document.querySelectorAll('.trending-content');
+    let counter = 0;
+    let pervCounter = trendingContent.length - 1;
+    next.addEventListener('click', () => {
+        counter += 1
+        if (counter == trendingContent.length) {
+            trendingContent[counter - 1].classList.remove('active')
+            counter = 0;
+            trendingContent[counter].classList.add('active')
+        } else {
+            trendingContent[counter - 1].classList.remove('active')
+            trendingContent[counter].classList.add('active')
+        }
+    })
+    perv.addEventListener('click', () => {
+        if (counter == 0) {
+            trendingContent[counter].classList.remove('active')
+            counter = trendingContent.length - 1;
+            trendingContent[counter].classList.add('active')
+        } else {
+            trendingContent[counter].classList.remove('active')
+            counter -= 1;
+            trendingContent[counter].classList.add('active')
+        }
+    })
+}
+
+toggleTrending();
