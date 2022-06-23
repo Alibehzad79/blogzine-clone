@@ -42,13 +42,13 @@
             </div>
             <div class="anothers-list flex">
                 <div class="font-size-btns flex">
-                    <button class="btn btn-font-size">A-</button>
-                    <button class="btn btn-font-size active">A</button>
-                    <button class="btn btn-font-size">A+</button>
+                    <button class="btn btn-font-size" id="minimize">A-</button>
+                    <button class="btn btn-font-size active" id="normal">A</button>
+                    <button class="btn btn-font-size" id="maximize">A+</button>
                 </div>
                 <div class="change-theme flex">
-                    <button class="btn btn-theme active"><i class="ri-sun-line"></i></button>
-                    <button class="btn btn-theme"><i class="ri-moon-line"></i></button>
+                    <button class="btn btn-theme active" id="sun"><i class="ri-sun-line"></i></button>
+                    <button class="btn btn-theme" id="moon"><i class="ri-moon-line"></i></button>
                 </div>
                 <ul class="list social-list flex">
                     <li class="list-item"><a href="#" class="list-link"><i class="ri-facebook-box-fill"></i></a></li>
@@ -190,16 +190,32 @@
                     </li>
                 </ul>
             </div>
-            <div class="another-list">
-                <a href="#" class="btn btn-subscribe">Subscribe</a>
-                <button class="btn btn-search"><i class="ri-search-line"></i></button>
-                <button class="btn btn-search"><i class="ri-menu-3-fill"></i></button>
+            <div class="anothers-list flex">
+                <a href="#" class="btn btn-subscribe link">Subscribe!</a>
+                <button class="btn btn-search" id="search"><i class="ri-search-line"></i></button>
+                <div class="search" id="search-box">
+                    <input type="search" class="search-input" placeholder="Search...">
+                    <input type="submit" class="search-btn btn" value="Search">
+                </div>
+                <button class="btn btn-navbar" id="offcanvasMenu"><i class="ri-menu-3-fill"></i></button>
+            </div>
+        </div>
+
+    </div>
+    <!-- End navbar -->
+    <div class="offcanvas" id="offcanvas">
+        <button class="btn btn-close" id="offcanvasClose"><i class="ri-close-line close"></i></button>
+        <div class="header">
+            <div class="title">
+                <img src="./img/logo.svg" alt="" class="img logo">
+            </div>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit dolorum numquam aperiam
+                    quam
+                    nihil in exercitationem laborum harum est delectus?</p>
             </div>
         </div>
     </div>
-
-    <!-- End navbar -->
-
 
     <!-- javaScript -->
     <script src="./js/scripts.js"></script>
