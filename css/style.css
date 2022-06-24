@@ -20,7 +20,7 @@ body {
 
 .flex {
     display: flex;
-    gap: 10px;
+    gap: 0.5rem;
 }
 
 .container {
@@ -164,6 +164,20 @@ input {
     font-size: 2rem;
 }
 
+.badge {
+    border: none;
+    outline: none;
+    margin: 0 0.2rem;
+    background-color: #5A5A5A;
+    border-radius: 0.3rem;
+    padding: 0 0.4rem;
+    color: #fff;
+    text-align: center;
+}
+
+.badge-danger {
+    background-color: #E01931;
+}
 
 /* Begin dark theme */
 body.active {
@@ -371,19 +385,6 @@ body.active {
     }
 }
 
-.badge {
-    border: none;
-    outline: none;
-    margin: 0 0.2rem;
-    background-color: #5A5A5A;
-    border-radius: 0.3rem;
-    padding: 0 0.4rem;
-    color: #fff;
-}
-
-.badge-danger {
-    background-color: #E01931;
-}
 
 .lifestyle-sections {
     display: none;
@@ -824,9 +825,116 @@ body.active {
 }
 
 /* End trending */
+
+/* Begin Slider */
+
+.slider {
+    display: flex;
+    gap: 0.5rem;
+    width: 75%;
+    height: 100%;
+    margin-top: 1rem;
+}
+
+.slide-item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: auto;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-items: flex-end;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.star {
+    width: 50%;
+    position: relative;
+    height: 500px;
+}
+
+.slider-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+    border-radius: 0.5rem;
+    transition: all ease 0.3s;
+}
+
+.slide-tag {
+    margin: 0 2rem;
+    padding: 0.3rem;
+}
+
+.slide-title {
+    margin: 0 2rem;
+}
+
+.slide-title>h2 {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.slide-title>.title:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.slide-content {
+    color: #fff;
+    margin: 0 2rem;
+    background-color: #312121b7;
+    padding: 1rem;
+    border-start-start-radius: 1.5rem;
+    border-end-start-radius: 1.5rem;
+}
+
+.info {
+    margin: 0 2rem;
+    display: flex;
+    justify-content: flex-start;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    background-color: #312121b7;
+    width: 100%;
+    border-start-start-radius: 1.5rem;
+    border-end-start-radius: 1.5rem;
+}
+
+.auther-img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.auther {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    gap: 0.51rem;
+    color: #fff;
+}
+
+.slide-date {
+    color: #fff;
+    margin: 0 1rem;
+}
+
+/* End Slider */
 /* Media Query */
 
 @media screen and (max-width: 900px) {
+    .alert-content {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
 
     .base-navbar,
     .clear,
