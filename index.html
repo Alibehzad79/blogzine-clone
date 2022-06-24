@@ -72,9 +72,9 @@
     <div class="container">
         <div class="navbar flex">
             <div class="logo flex">
-                <a href='index.html'><img src="./img/logo.svg" alt="site logo" class="img"></a>
+                <a href='index.html'><img src="./img/logo.svg" alt="site" class="img"></a>
             </div>
-            <div class="list">
+            <div class="list navbar-list">
                 <ul class="list">
                     <li class="list-item dropdown active">
                         <a href="#" class="list-link active">Home <i class="ri-arrow-drop-down-line"></i></a>
@@ -192,6 +192,7 @@
             </div>
             <div class="anothers-list flex">
                 <a href="#" class="btn btn-subscribe link">Subscribe!</a>
+                <button class="btn btn-navbar" id="navbarMenuBtn"><i class="ri-menu-5-fill"></i></button>
                 <button class="btn btn-search" id="search"><i class="ri-search-line"></i></button>
                 <div class="search" id="search-box">
                     <input type="search" class="search-input" placeholder="Search...">
@@ -200,7 +201,6 @@
                 <button class="btn btn-navbar" id="offcanvasMenu"><i class="ri-menu-3-fill"></i></button>
             </div>
         </div>
-
     </div>
     <!-- End navbar -->
     <!-- Begin offcanvas -->
@@ -227,7 +227,7 @@
                 <span>The Blogzine!</span>
                 <h2>Save on Premium Membership</h2>
                 <span class="content">Get the insights report trusted by experts around the globe. Become a Member
-                    Today!</span>
+                    Today! lorem100</span>
                 <a href="#" class="btn btn-plane link">View pricing plans</a>
             </div>
         </div>
@@ -237,20 +237,105 @@
             <a href="mailto:test@mail.com" class="link">test@mail.com</a>
         </div>
     </div>
+    <div class="offcanvas offcanvas-navbar" id="offcanvasNavbar">
+        <button class="btn btn-close" id="offcanvasNavbarClose"><i class="ri-close-line close"></i></button>
+        <div class="body">
+            <ul class="list offcanvas-list">
+                <li class="list-item">
+                    <a href="#" class="list-link sm-list-link">Home <i
+                            class="ri-arrow-drop-down-line font-size-1"></i></a>
+                    <ul class="sm-list list">
+                        <li class="sm-list-item list-item"><a href="#" class="sm-list-link list-link">Home 2</a></li>
+                        <li class="sm-list-item list-item"><a href="#" class="sm-list-link list-link">Home Defaulte</a>
+                        </li>
+                        <li class="sm-list-item list-item"><a href="#" class="sm-list-link list-link">Home Lazy Load</a>
+                        </li>
+                        <li class="sm-list-item list-item"><a href="#" class="sm-list-link list-link">Magazine
+                                Classic</a></li>
+                        <li class="sm-list-item list-item"><a href="#" class="sm-list-link list-link">Magazine</a></li>
+                        <li class="sm-list-item list-item"><a href="#" class="sm-list-link list-link">Home Cards</a>
+                        </li>
+                        <li class="sm-list-item list-item"><a href="#" class="sm-list-link list-link">Blog Classic</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="list-link sm-list-link">Pages <i
+                            class="ri-arrow-drop-down-line font-size-1"></i></a>
+                    <ul class="sm-list list">
+                        <li class="sm-list-item list-item"><a href="#" class="sm-list-link list-link">Home1</a></li>
+                        <li class="sm-list-item list-item"><a href="#" class="sm-list-link list-link">Home2</a></li>
+                        <li class="sm-list-item list-item"><a href="#" class="sm-list-link list-link">Home3</a></li>
+                        <li class="sm-list-item list-item"><a href="#" class="sm-list-link list-link">Home4</a></li>
+                        <li class="sm-list-item list-item"><a href="#" class="sm-list-link list-link">Home5</a></li>
+                        <li class="sm-list-item list-item"><a href="#" class="sm-list-link list-link">Home6</a></li>
+                        <li class="sm-list-item list-item"><a href="#" class="sm-list-link list-link">Home7</a></li>
+                    </ul>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="list-link sm-list-link">Post <i
+                            class="ri-arrow-drop-down-line font-size-1"></i></a>
+                    <ul class="sm-list list">
+                        <li class="sm-list-item list-item"><a href="#" class="sm-list-link list-link">Home1</a></li>
+                        <li class="sm-list-item list-item"><a href="#" class="sm-list-link list-link">Home2</a></li>
+                        <li class="sm-list-item list-item"><a href="#" class="sm-list-link list-link">Home3</a></li>
+                        <li class="sm-list-item list-item"><a href="#" class="sm-list-link list-link">Home4</a></li>
+                        <li class="sm-list-item list-item"><a href="#" class="sm-list-link list-link">Home5</a></li>
+                        <li class="sm-list-item list-item"><a href="#" class="sm-list-link list-link">Home6</a></li>
+                        <li class="sm-list-item list-item"><a href="#" class="sm-list-link list-link">Home7</a></li>
+                    </ul>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="list-link sm-list-link">Lifestyle <i
+                            class="ri-arrow-drop-down-line font-size-1"></i></a>
+                    <ul class="sm-list list">
+                        <li class="sm-list-item list-item"><a href="#" class="sm-list-link list-link">Home1</a></li>
+                        <li class="sm-list-item list-item"><a href="#" class="sm-list-link list-link">Home2</a></li>
+                        <li class="sm-list-item list-item"><a href="#" class="sm-list-link list-link">Home3</a></li>
+                        <li class="sm-list-item list-item"><a href="#" class="sm-list-link list-link">Home4</a></li>
+                        <li class="sm-list-item list-item"><a href="#" class="sm-list-link list-link">Home5</a></li>
+                        <li class="sm-list-item list-item"><a href="#" class="sm-list-link list-link">Home6</a></li>
+                        <li class="sm-list-item list-item"><a href="#" class="sm-list-link list-link">Home7</a></li>
+                    </ul>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="list-link sm-list-link">Dashboard</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer">
+            <div class="membership">
+                <span>The Blogzine!</span>
+                <h2>Permiun Membership</h2>
+                <span>Become a Member Today!</span>
+                <a href="#" class="btn btn-plane link">View pricing plans</a>
+            </div>
+        </div>
+    </div>
     <!-- End offcanvas -->
     <!-- Begin trending alert -->
     <div class="container">
         <div class="trending">
+            <span class="trending-btn">Trending:</span>
             <div>
-                <span class="trending-btn">Trending:</span>
-                <p class="trending-content active">1. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, hic.</p>
+                <p class="trending-content active">1. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero,
+                    hic.</p>
                 <p class="trending-content">2. Lorem ipsum, dolor sit amet consecteturc.</p>
-                <p class="trending-content">3. Lorem ipsum, dolor sit amet consectetur Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga amet non, possimus quisquam nemo expedita!</p>
-                <p class="trending-content">4. Lorem ipsum, dolor sit amet Lorem ipsum dolor sit amet..</p>
+                <p class="trending-content">3. Lorem ipsum, dolor sit amet consectetur Lorem, ipsum dolor sit amet
+                    consectetur adipisicing elit. Fuga amet non, possimus quisquam nemo expedita!</p>
+                <p class="trending-content">4. Lorem ipsum, dolor sit amet Lorem ipsum dolor sit amet.. Lorem ipsum
+                    dolor sit amet consectetur adipisicing elit. Explicabo atque magni laboriosam nobis reiciendis eos
+                    placeat tempore in quibusdam. Beatae vero distinctio consectetur fugit praesentium. Eum, distinctio
+                    quasi, quas, porro voluptatum doloremque quos excepturi cupiditate qui minus optio nihil dolor
+                    repellat esse. Labore officiis amet molestias maxime ducimus doloremque velit, in hic voluptas unde
+                    distinctio praesentium eum, quasi sint facilis explicabo perferendis deleniti repellendus, incidunt
+                    eos. Eligendi minus repellat commodi saepe distinctio cupiditate consequatur. Quod repellat
+                    perferendis fugit adipisci, modi exercitationem, quos unde eius quia nisi quasi debitis reiciendis,
+                    voluptas quam rerum delectus molestiae est dolorem consequatur vel dicta at.</p>
             </div>
             <div>
-               <i class="ri-arrow-drop-left-line perv" id="perv"></i>
-               <i class="ri-arrow-drop-right-line next" id="next"></i>
+                <i class="ri-arrow-drop-left-line perv" id="perv"></i>
+                <i class="ri-arrow-drop-right-line next" id="next"></i>
             </div>
         </div>
     </div>

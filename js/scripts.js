@@ -70,16 +70,29 @@ toggleSearch();
 
 function toggleOffcanvas() {
     const offcanvasMenu = document.querySelector('#offcanvasMenu');
+    const navbarMenuBtn = document.querySelector('#navbarMenuBtn');
     const offcanvasClose = document.querySelector('#offcanvasClose');
+    const offcanvasNavbarClose = document.querySelector('#offcanvasNavbarClose');
     const offcanvas = document.querySelector('#offcanvas');
+    const offcanvasNavbar = document.querySelector('#offcanvasNavbar');
+
+
 
     offcanvasMenu.addEventListener('click', () => {
         offcanvas.classList.toggle('active')
+    })
+    navbarMenuBtn.addEventListener('click', () => {
+        offcanvasNavbar.classList.toggle('active')
     })
 
     offcanvasClose.addEventListener('click', () => {
         if (offcanvas.classList.contains('active')) {
             offcanvas.classList.remove('active')
+        }
+    })
+    offcanvasNavbarClose.addEventListener('click', () => {
+        if (offcanvasNavbar.classList.contains('active')) {
+            offcanvasNavbar.classList.remove('active')
         }
     })
 }
@@ -91,7 +104,6 @@ function toggleTrending() {
     const perv = document.querySelector('#perv');
     let trendingContent = document.querySelectorAll('.trending-content');
     let counter = 0;
-    let pervCounter = trendingContent.length - 1;
     next.addEventListener('click', () => {
         counter += 1
         if (counter == trendingContent.length) {
@@ -114,6 +126,42 @@ function toggleTrending() {
             trendingContent[counter].classList.add('active')
         }
     })
+
+    setInterval(() => {
+        counter += 1;
+        if (counter == trendingContent.length) {
+            trendingContent[counter - 1].classList.remove('active')
+            counter = 0
+            trendingContent[counter].classList.add('active')
+        } else {
+            trendingContent[counter - 1].classList.remove('active')
+            trendingContent[counter].classList.add('active')
+        }
+        if (counter >= trendingContent.length) {
+            trendingContent[counter].classList.remove('active')
+            counter = 0
+            trendingContent[counter].classList.add('active')
+        }
+    }, 5000)
+
 }
 
 toggleTrending();
+
+function toggleOffcanvasNavbarItem() {
+    let navbarList = document.querySelectorAll('.list-item');
+    navbarList.forEach(item => {
+        item.querySelector('a').addEventListener('click', () => {
+            let smList = document.querySelectorAll('.sm-list');
+            smList.forEach(listItem => {
+                if (listItem != item.querySelector('.sm-list')) {
+                    listItem.classList.remove('active')
+                    item.classList.remove('active')
+                }
+            })
+            item.querySelector('.sm-list').classList.toggle('active');
+        })
+    })
+}
+
+toggleOffcanvasNavbarItem();
