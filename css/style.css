@@ -13,6 +13,7 @@ body {
     gap: 1rem;
     display: flex;
     flex-direction: column;
+    transition: all ease 0.3s;
 }
 
 
@@ -76,6 +77,10 @@ body {
     color: #2ecc71;
 }
 
+.text-white {
+    color: #fff;
+}
+
 .text-danger {
     color: #E01931;
 }
@@ -101,6 +106,10 @@ body {
 .link {
     text-decoration: none;
     position: relative;
+}
+
+.link:hover {
+    text-decoration: underline;
 }
 
 .title {
@@ -828,103 +837,156 @@ body.active {
 
 /* Begin Slider */
 
-.slider {
-    display: flex;
-    gap: 0.5rem;
+.slide {
     width: 75%;
-    height: 100%;
-    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    height: 600px;
 }
 
 .slide-item {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    position: relative;
-    height: auto;
-    gap: 0.5rem;
-    justify-content: flex-end;
     align-items: flex-start;
-    align-content: flex-start;
     justify-items: flex-end;
-    border-radius: 0.5rem;
-    padding: 1rem;
-}
-
-.star {
-    width: 50%;
+    justify-content: flex-end;
+    border-radius: 1rem;
+    overflow: hidden;
     position: relative;
-    height: 500px;
+    filter: blur(1rem 1rem black 1rem);
+    box-shadow: inset 0rem -7rem 10rem;
+    gap: 1rem;
 }
 
-.slider-img {
+.second-slide {
+    width: 50%;
+    display: flex;
+    height: 100%;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.third-slide {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+}
+
+.second-slide>.sec-slide >.slide-body>a {
+    font-size: 1.5rem;
+}
+
+.second-slide>.sec-slide >.slide-footer > .slide-info > span {
+    font-size: 1rem;
+}
+
+.second-slide > .third-slide > .last-slide > .slide-body>a {
+    font-size: 1.5rem;
+}
+
+.second-slide > .third-slide > .last-slide > .slide-footer > .slide-info > span {
+    font-size: 1rem;
+}
+
+.first-slide {
+    width: 50%;
+    height: 100%;
+}
+
+.sec-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.last-slide {
+    width: 50%;
+    height: 100%;
+}
+
+.slide-img {
+    z-index: -1;
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: -5;
-    border-radius: 0.5rem;
-    transition: all ease 0.3s;
+    transition: all ease 1s;
+}
+
+.slide-item:hover .slide-img {
+    transform: scale(1.1);
+}
+
+.slide-header,
+.slide-body,
+.slide-footer {
+    margin: 0 0 0 1.5rem;
+    /* padding: 0.5rem; */
+}
+
+.slide-img-box {
+    width: 100%;
+    height: 100%;
 }
 
 .slide-tag {
-    margin: 0 2rem;
-    padding: 0.3rem;
-}
-
-.slide-title {
-    margin: 0 2rem;
-}
-
-.slide-title>h2 {
+    width: 100%;
+    height: 100%;
+    background-color: #b61a2c;
+    padding: 0.1rem 0.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
     color: #fff;
+}
+
+.slide-body>a {
     font-size: 2rem;
+    text-transform: capitalize;
+    word-break: keep-all;
+    color: #181303;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 900;
 }
 
-.slide-title>.title:hover {
+.slide-item>.slide-body>a:hover {
     text-decoration: underline;
-    color: #fff;
 }
 
-.slide-content {
-    color: #fff;
-    margin: 0 2rem;
-    background-color: #312121b7;
-    padding: 1rem;
-    border-start-start-radius: 1.5rem;
-    border-end-start-radius: 1.5rem;
+.slide-footer {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
 }
 
-.info {
-    margin: 0 2rem;
+.slide-footer>.slide-content {
+    text-transform: capitalize;
+    text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    max-height: 0.2rem;
+}
+
+.slide-info {
+    color: #fff;
     display: flex;
     justify-content: flex-start;
-    justify-items: center;
     align-items: center;
-    align-content: center;
-    background-color: #312121b7;
-    width: 100%;
-    border-start-start-radius: 1.5rem;
-    border-end-start-radius: 1.5rem;
+    gap: 1rem;
+    padding: 1rem 0;
 }
 
-.auther-img {
-    width: 3rem;
-    height: 3rem;
+.slide-info>.auther-img {
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
 }
 
-.auther {
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
-    gap: 0.51rem;
-    color: #fff;
-}
-
-.slide-date {
-    color: #fff;
-    margin: 0 1rem;
+.slide-info>.slide-info-item {
+    text-transform: capitalize;
 }
 
 /* End Slider */
