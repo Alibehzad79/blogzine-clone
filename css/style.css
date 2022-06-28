@@ -966,8 +966,9 @@ body.active {
 .slide-footer>.slide-content {
     text-transform: capitalize;
     text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    max-height: 0.2rem;
+    word-break: keep-all;
+    max-height: 1rem;
+    overflow: hidden;
 }
 
 .slide-info {
@@ -1060,5 +1061,36 @@ body.active {
 
     .search {
         top: 50px;
+    }
+    .slide {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+    }
+    .slide-item {
+        width: 100%;
+        height: 250px;
+    }
+
+    .slide-footer {
+        padding: 0.5rem;
+    }
+    .second-slide {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+    .third-slide {
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+
+    .slide-body>a {
+        font-size: 1.5rem;
+    }
+    .slide-footer > .slide-info {
+        display: none;
     }
 }
