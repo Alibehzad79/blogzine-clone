@@ -1007,6 +1007,14 @@ body.active {
     text-transform: capitalize;
 }
 
+.slide-info > .auther-img {
+    display: none;
+}
+
+.first-slide > .slide-footer > .slide-info > .auther-img {
+    display: inline;
+}
+
 /* End Slider */
 /* Media Query */
 
