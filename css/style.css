@@ -1110,4 +1110,7 @@ body.active {
     .slide-footer > .slide-info {
         display: none;
     }
+    .first-slide {
+        height: 300px;
+    }
 }
