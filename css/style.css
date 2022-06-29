@@ -24,6 +24,10 @@ body {
     gap: 0.5rem;
 }
 
+a {
+    text-decoration: none;
+}
+
 .container {
     display: flex;
     height: auto;
@@ -108,8 +112,26 @@ body {
     position: relative;
 }
 
+.link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    transition: transform 0.5s;
+    transform: scale(0);
+    transform-origin: left;
+}
+
 .link:hover {
     text-decoration: underline;
+}
+
+.link:hover::after {
+    transform: scale(1);
+    transform-origin: left;
 }
 
 .title {
@@ -892,19 +914,19 @@ body.active {
     height: 100%;
 }
 
-.second-slide>.sec-slide >.slide-body>a {
+.second-slide>.sec-slide>.slide-body>a {
     font-size: 1.5rem;
 }
 
-.second-slide>.sec-slide >.slide-footer > .slide-info > span {
+.second-slide>.sec-slide>.slide-footer>.slide-info>span {
     font-size: 1rem;
 }
 
-.second-slide > .third-slide > .last-slide > .slide-body>a {
+.second-slide>.third-slide>.last-slide>.slide-body>a {
     font-size: 1.5rem;
 }
 
-.second-slide > .third-slide > .last-slide > .slide-footer > .slide-info > span {
+.second-slide>.third-slide>.last-slide>.slide-footer>.slide-info>span {
     font-size: 1rem;
 }
 
@@ -971,7 +993,7 @@ body.active {
 }
 
 .slide-item>.slide-body>a:hover {
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 .slide-footer {
@@ -1008,6 +1030,26 @@ body.active {
 }
 
 /* End Slider */
+
+/* Begin Highlights */
+.highlights {
+    width: 75%;
+    height: auto;
+    background-color: #b61a2c;
+    position: relative;
+    display: flex;
+}
+.left-nav {
+    width: 70%;
+    height: 100px;
+    background-color: #b61a2c;
+}
+.right-nav {
+    width: 30%;
+    height: 100px;
+    background-color: #1136C7;
+}
+/* End Highlights */
 /* Media Query */
 
 @media screen and (max-width: 900px) {
@@ -1079,12 +1121,14 @@ body.active {
     .search {
         top: 50px;
     }
+
     .slide {
         flex-direction: column;
         width: 100%;
         height: 100%;
         padding: 1rem;
     }
+
     .slide-item {
         width: 100%;
         height: 250px;
@@ -1093,11 +1137,13 @@ body.active {
     .slide-footer {
         padding: 0.5rem;
     }
+
     .second-slide {
         flex-direction: column;
         width: 100%;
         height: 100%;
     }
+
     .third-slide {
         flex-direction: column;
         height: 100%;
@@ -1107,9 +1153,11 @@ body.active {
     .slide-body>a {
         font-size: 1.5rem;
     }
-    .slide-footer > .slide-info {
+
+    .slide-footer>.slide-info {
         display: none;
     }
+
     .first-slide {
         height: 300px;
     }
