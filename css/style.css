@@ -125,10 +125,6 @@ a {
     transform-origin: left;
 }
 
-.link:hover {
-    text-decoration: underline;
-}
-
 .link:hover::after {
     transform: scale(1);
     transform-origin: left;
@@ -990,10 +986,6 @@ body.active {
     text-decoration: none;
     color: #fff;
     font-weight: 900;
-}
-
-.slide-item>.slide-body>a:hover {
-    /* text-decoration: underline; */
 }
 
 .slide-footer {
