@@ -165,3 +165,13 @@ function toggleOffcanvasNavbarItem() {
 }
 
 toggleOffcanvasNavbarItem();
+
+function navStiky() {
+    const navbar = document.querySelector('#navbar');
+    const stiky = navbar.offsetTop;
+    if (window.scrollY > stiky) {
+        navbar.classList.add('stiky')
+    } else {
+        navbar.classList.remove('stiky')
+    }
+}

@@ -395,7 +395,26 @@ body.active {
     align-items: baseline;
     width: 75%;
     position: relative;
+    background-color: #fff;
 }
+.stiky {
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    z-index: 10;
+    box-shadow: 0rem 0rem 1rem gray;
+    animation: stiky 1s ease;
+}
+@keyframes stiky {
+    0% {opacity: 0; transform: translateY(-100px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+
 
 .img {
     width: 100%;
@@ -1314,6 +1333,60 @@ body.active {
 }
 
 /* End Highlights */
+
+/* Begin Sopnsor new */
+.sponsor {
+    width: 75%;
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    justify-items: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+}
+.sponsor-body {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+}
+.sponsor-item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 1rem;
+}
+.sponsor-item > a {
+    font-weight: normal !important;
+}
+.sponsor-img {
+    width: 259px;
+    height: 194px;
+    border-radius: 1rem;
+    width: 100%;;
+    position: relative;
+}
+.sponsor-item-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+.sponsor-item-header > a {
+    position: absolute;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    display: flex;
+    padding: 0.2rem;
+}
+/* End Sopnsor news */
 /* Media Query */
 
 @media screen and (max-width: 900px) {
@@ -1468,6 +1541,20 @@ body.active {
         display: none;
     }
     .right-nav {
+        width: 100%;
+    }
+    .stiky {
+        padding: 1rem;
+        width: 100%;
+    } 
+    .sponsor {
+        width: 90%;
+    }
+    .sponsor-body {
+        flex-direction: column;
+        width: 100%;
+    }
+    .sponsor-item {
         width: 100%;
     }
 }
