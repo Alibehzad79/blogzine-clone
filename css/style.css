@@ -1557,4 +1557,7 @@ body.active {
     .sponsor-item {
         width: 100%;
     }
+    .sponsor-item > .slide-info {
+        display: none;
+    }
 }
