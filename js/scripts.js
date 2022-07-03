@@ -168,10 +168,25 @@ toggleOffcanvasNavbarItem();
 
 function navStiky() {
     const navbar = document.querySelector('#navbar');
+    const highlights = document.querySelector('.highlights');
+    const goToTop = document.querySelector('.go-to-top');
+    const goToTopOffset = highlights.offsetTop;
     const stiky = navbar.offsetTop;
     if (window.scrollY > stiky) {
         navbar.classList.add('stiky')
     } else {
         navbar.classList.remove('stiky')
     }
+
+    if (window.scrollY > goToTopOffset) {
+        goToTop.classList.add('active')
+    } else {
+        goToTop.classList.remove('active')
+    }
 }
+navStiky();
+function goToTopFunction() {
+    window.scrollTo(0, 0)
+}
+
+goToTopFunction();
