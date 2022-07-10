@@ -168,9 +168,8 @@ toggleOffcanvasNavbarItem();
 
 function navStiky() {
     const navbar = document.querySelector('#navbar');
-    const highlights = document.querySelector('.highlights');
     const goToTop = document.querySelector('.go-to-top');
-    const goToTopOffset = highlights.offsetTop;
+    const goToTopOffset = 1000;
     const stiky = navbar.offsetTop;
     if (window.scrollY > stiky) {
         navbar.classList.add('stiky')
@@ -185,6 +184,7 @@ function navStiky() {
     }
 }
 navStiky();
+
 function goToTopFunction() {
     window.scrollTo(0, 0)
 }
