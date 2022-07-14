@@ -500,6 +500,7 @@ body.active {
 .list-item.active {
     list-style-type: disc;
     color: #1136C7;
+    margin-left: 10px;
 }
 
 .dropdown:hover .dropdown-item {
@@ -2010,4 +2011,42 @@ footer>.container>.clear {
         padding: 1rem;
         display: block;
     }
+
+    /* posts.html responsive */
+    .post-list {
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .post-body {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .post-item-list {
+        width: 100%;
+        flex-direction: column;
+        gap: 10rem;
+        margin-bottom: 4rem;
+    }
+
+    .post-body>.right-nav {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .post-item {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .post-item-content>.badge {
+        width: 40%;
+    }
+
+    /* posts.html responsive */
 }
