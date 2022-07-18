@@ -289,15 +289,19 @@ input {
 .twitter {
     background-color: #11a3c7;
 }
+
 .linkedin {
     background-color: #0f5b99;
 }
+
 .pinterest {
     background-color: red;
 }
+
 .telegram {
     background-color: #4e92eb;
 }
+
 /* Begin dark theme */
 body.active {
     background-color: #181303;
@@ -1850,7 +1854,7 @@ footer>.container>.clear {
     flex-direction: column;
     gap: 1rem;
     margin-left: 10rem;
-    
+
 }
 
 .categories {
@@ -1864,7 +1868,6 @@ footer>.container>.clear {
 .single-post-body {
     width: 75%;
     height: 500px;
-    background-color: red;
 }
 
 .shear-to {
@@ -1874,6 +1877,7 @@ footer>.container>.clear {
     align-items: center;
     align-content: flex-start;
 }
+
 .share {
     width: 50px;
     height: 50px;
@@ -1882,6 +1886,62 @@ footer>.container>.clear {
     border-radius: 50%;
 }
 
+.single-post-body {
+    width: 75%;
+    display: flex;
+    gap: 1rem;
+    height: auto;
+
+}
+
+.single-post-body > .left-nav {
+    width: 75%;
+    height: auto;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.single-post-body > .right-nav {
+    width: 25%;
+    background-color: #111215;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.text-content {
+    text-align: left;
+    word-break: keep-all;
+    color: #5A5A5A;
+}
+.text-content::first-letter {
+    font-size: 30px;
+}
+.gallery {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    gap: 1rem;
+}
+.gallery-img {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+.single-page-adds {
+    padding: 1rem;
+    background-color: #c9c9c92d;
+    border-radius: 0.3rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.ri-double-quotes-r {
+    font-size: 3rem;
+}
 /* End Single post */
 /* Media Query */
 
