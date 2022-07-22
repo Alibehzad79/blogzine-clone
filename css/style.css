@@ -1894,14 +1894,15 @@ footer>.container>.clear {
 
 }
 
-.single-post-body > .left-nav {
+.single-post-body>.left-nav {
     width: 75%;
     height: auto;
     gap: 1rem;
     display: flex;
     flex-direction: column;
 }
-.single-post-body > .right-nav {
+
+.single-post-body>.right-nav {
     width: 25%;
     background-color: #111215;
     gap: 1rem;
@@ -1914,23 +1915,31 @@ footer>.container>.clear {
     text-align: left;
     word-break: keep-all;
     color: #5A5A5A;
+    display: block;
 }
+
 .text-content::first-letter {
     font-size: 30px;
 }
+
 .gallery {
-    display: flex;
+    display: block;
     width: 100%;
     justify-content: center;
     align-items: center;
     align-content: center;
     justify-items: center;
     gap: 1rem;
+    flex-wrap: wrap;
+    height: 250px;
+    overflow: scroll;
 }
+
 .gallery-img {
-    width: 100%;
+    width: 25%;
     border-radius: 0.5rem;
 }
+
 .single-page-adds {
     padding: 1rem;
     background-color: #c9c9c92d;
@@ -1942,6 +1951,43 @@ footer>.container>.clear {
 .ri-double-quotes-r {
     font-size: 3rem;
 }
+
+.prev-next-post {
+    display: flex;
+}
+
+.prev-post {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    gap: 1rem;
+    border: 1px solid #d6d6da;
+    flex-wrap: wrap;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.prev-post > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+}
+.prev-post > a > i {
+    font-size: 1.5rem;
+    color: #181303;
+}
+
+.img-prev-post {
+    width: 150px;
+    height: 75px;
+}
+
 /* End Single post */
 /* Media Query */
 
