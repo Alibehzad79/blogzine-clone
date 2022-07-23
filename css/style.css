@@ -2530,5 +2530,7 @@ footer>.container>.clear {
     .single-post-body>.right-nav > .recent-posts {
         padding: 1rem;
     }
-    /* posts.html responsive */
+    .btn-submit {
+        width: 50%;
+    }
 }
