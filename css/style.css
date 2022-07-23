@@ -1987,7 +1987,59 @@ footer>.container>.clear {
     width: 150px;
     height: 75px;
 }
-
+.auther-info {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #e3f1fd;
+    border-radius: 0.3rem;
+}
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.user-info {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    width: 100%;
+}
+.info-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.user-name {
+    display: flex;
+    flex-direction: column;
+}
+.user-name > a {
+    font-size: 25px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    color: #111215;
+    font-weight: bold;
+}
+.user-name > span {
+    color: #5A5A5A;
+}
+.btn-more-article {
+    background-color: #b7ddff;
+    padding: 0.5rem;
+    font-size: 13px;
+    color: #1136C7;
+    border-radius: 0.2rem;
+    transition: all ease 0.5s;
+}
+.btn-more-article:hover {
+    background-color: #1136C7;
+    color: #fff;
+}
+.info-footer > ul > li > a > i {
+    font-size: 25px;
+}
 /* End Single post */
 /* Media Query */
 
